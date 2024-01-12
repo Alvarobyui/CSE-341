@@ -5,8 +5,8 @@ const router = express.Router();
 router.get('/home', (req, res) => {
   res.send('Hello World, This is home router');
 });
-router.get('/profile', (req, res) => {
-  res.send('Hello World, This is profile router');
+router.get('/user', (req, res) => {
+  res.send('Alvaro Diaz');
 });
 router.get('/login', (req,res) => {
   res.send('Hello World, This is login router');
