@@ -6,7 +6,7 @@ router.get('/home', (req, res) => {
   res.send('Hello World, This is home router');
 });
 router.get('/user', (req, res) => {
-  res.send('Alvaro Diaz');
+  res.send('Zory Warton');
 });
 router.get('/login', (req,res) => {
   res.send('Hello World, This is login router');
