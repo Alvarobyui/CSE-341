@@ -1,11 +1,11 @@
 const home = (req, res) => {
-  res.send('Hello World, This is home router');
+  res.send('Welcome to the home router');
 }
 const user = (req, res) => {
   res.send('Zory Warton');
 }
 const login = (req,res) => {
-  res.send('Hello World, This is login router');
+  res.send('Welcome to the login router');
 }
 
 module.exports = {
