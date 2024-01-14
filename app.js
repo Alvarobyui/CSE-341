@@ -4,9 +4,9 @@ const router = express.Router();
 
 const routerController = require("./controllers/routers");
 
-router.get('/', routerController.home);
-router.get('/user', routerController.user);
+router.get('/', routerController.user);
 router.get('/login', routerController.login);
+router.get('/logout', routerController.logout);
 
 app.use('/', router);
 
