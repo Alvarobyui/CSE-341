@@ -2,18 +2,11 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 
-router.get('/home', (req, res) => {
-  res.send('Hello World, This is home router');
-});
-router.get('/user', (req, res) => {
-  res.send('Zory Warton');
-});
-router.get('/login', (req,res) => {
-  res.send('Hello World, This is login router');
-});
-router.get('/logout', (req, res) => {
-  res.send('Hello World, This is logout router)');
-});
+const routerController = require("./controllers/routers");
+
+router.get('/home', routerController.home);
+router.get('/user', routerController.user);
+router.get('/login', routerController.login);
 
 app.use('/', router);
 
