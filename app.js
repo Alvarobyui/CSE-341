@@ -1,19 +1,23 @@
 const express = require('express');
-const connectDB = require('./DB/connection');
+const bodyParser = require('body-parser');
+const mongodb = require('./DB/connection');
+
+const port = process.env.PORT || 8080;
 const app = express();
-const router = express.Router();
 
-const routerController = require("./controllers/routers");
-const { connect } = require('mongoose');
+app
+  .use(bodyParser.json())
+  .use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  })
+  .use('/', require('./routes'));
 
-router.get('/', routerController.user);
-router.get('/professional', routerController.login);
-router.get('/contacts', routerController.contacts);
-
-app.use('/', router);
-
-connectDB();
-
-app.listen(process.env.PORT || 8080, () => {
-  console.log('Web Server is listening at port ' + (process.env.PORT || 8080));
+mongodb.initDb((err, mongodb) => {
+  if (err) {
+    console.log(err);
+  } else {
+    app.listen(port);
+    console.log(`Connected to DB and listening on ${port}`);
+  }
 });

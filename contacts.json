@@ -1,0 +1,23 @@
+{
+  "contact1":{
+    "firstName":"Alvaro",
+    "lastName":"Diaz",
+    "email":"alvaro@gmail.com",
+    "favoriteColor":"Blue",
+    "birthday":"1990-11-28"
+  },
+  "contact2":{
+    "firstName":"Zory",
+    "lastName":"Warton",
+    "email":"zory@gmail.com",
+    "favoriteColor":"Green",
+    "Birthday":"1985-05-15"
+  },
+  "contact3":{
+    "firstName":"Andre",
+    "lastName":"Diaz",
+    "email":"andre@gmail.com",
+    "favoriteColor":"Red",
+    "Birthday":"1985-08-15"
+  }
+}
